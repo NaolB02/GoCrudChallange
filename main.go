@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-    // Initialize the router
     router := handlers.NewRouter()
 
     // CORS middleware
@@ -18,6 +17,5 @@ func main() {
     // Handler with CORS support
     handler := c.Handler(router)
 
-    // Start the server
     log.Fatal(http.ListenAndServe(":8080", handler))
 }
